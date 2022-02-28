@@ -2,6 +2,8 @@ package UD26_Ej3.service;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import UD26_Ej3.dao.IProductosDAO;
 import UD26_Ej3.dto.Productos;
 
 public class ProductosServiceIMPL implements IProductosService{
@@ -19,8 +21,8 @@ public class ProductosServiceIMPL implements IProductosService{
 	}
 
 	@Override
-	public Productos ProductosXID(int id) {
-		return iProductosDAO.findById(id).get();
+	public Productos ProductosXID(int Codigo) {
+		return iProductosDAO.findById(Codigo).get();
 	}
 
 	@Override
@@ -29,8 +31,8 @@ public class ProductosServiceIMPL implements IProductosService{
 	}
 
 	@Override
-	public void eliminarProductos(int id) {
-		iProductosDAO.deleteById(id);
+	public void eliminarProductos(int Codigo) {
+		iProductosDAO.deleteById(Codigo);
 	}
 
 }

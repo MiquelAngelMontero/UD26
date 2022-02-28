@@ -2,6 +2,7 @@ package UD26_Ej3.service;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import UD26_Ej3.dao.IMaquinas_RegistradorasDAO;
 import UD26_Ej3.dto.Maquinas_Registradoras;
 
 public class Maquinas_RegistradorasServiceIMPL implements IMaquinas_RegistradorasService{
@@ -19,8 +20,8 @@ public class Maquinas_RegistradorasServiceIMPL implements IMaquinas_Registradora
 	}
 
 	@Override
-	public Maquinas_Registradoras Maquinas_RegistradorasXID(int id) {
-		return iMaquinas_RegistradorasDAO.findById(id).get();
+	public Maquinas_Registradoras Maquinas_RegistradorasXID(int Codigo) {
+		return iMaquinas_RegistradorasDAO.findById(Codigo).get();
 	}
 
 	@Override
@@ -29,8 +30,8 @@ public class Maquinas_RegistradorasServiceIMPL implements IMaquinas_Registradora
 	}
 
 	@Override
-	public void eliminarMaquinas_Registradoras(int id) {
-		iMaquinas_RegistradorasDAO.deleteById(id);
+	public void eliminarMaquinas_Registradoras(int Codigo) {
+		iMaquinas_RegistradorasDAO.deleteById(Codigo);
 	}
 
 }

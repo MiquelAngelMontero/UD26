@@ -2,8 +2,12 @@ package UD26_Ej3.service;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import UD26_Ej3.dao.ICajerosDAO;
 import UD26_Ej3.dto.Cajeros;
 
+@Service
 public class CajerosServiceIMPL implements ICajerosService{
 
 	@Autowired
@@ -19,8 +23,8 @@ public class CajerosServiceIMPL implements ICajerosService{
 	}
 
 	@Override
-	public Cajeros CajerosXID(int id) {
-		return iCajerosDAO.findById(id).get();
+	public Cajeros CajerosXID(int Codigo) {
+		return iCajerosDAO.findById(Codigo).get();
 	}
 
 	@Override
@@ -29,8 +33,8 @@ public class CajerosServiceIMPL implements ICajerosService{
 	}
 
 	@Override
-	public void eliminarCajeros(int id) {
-		iCajerosDAO.deleteById(id);
+	public void eliminarCajeros(int Codigo) {
+		iCajerosDAO.deleteById(Codigo);
 	}
 
 }

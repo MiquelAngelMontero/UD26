@@ -9,9 +9,9 @@ public interface ICajerosService {
 
 	public Cajeros guardarCajeros(Cajeros Cajeros);
 
-	public Cajeros CajerosXID(int id);
+	public Cajeros CajerosXID(int Codigo);
 
 	public Cajeros actualizarCajeros(Cajeros Cajeros);
 
-	public void eliminarCajeros(int id);
+	public void eliminarCajeros(int Codigo);
 }
