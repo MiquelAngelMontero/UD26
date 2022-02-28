@@ -3,10 +3,11 @@ package main.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import main.dao.ICientificosDAO;
 import main.dto.Cientificos;
-
+@Service
 public class CientificosServiceIMPL implements ICientificosService {
 	@Autowired
 	ICientificosDAO iCientificosDAO;

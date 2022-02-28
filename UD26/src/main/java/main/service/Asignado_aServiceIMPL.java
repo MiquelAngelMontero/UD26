@@ -3,10 +3,11 @@ package main.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import main.dao.IAsignado_aDAO;
 import main.dto.Asignado_a;
-
+@Service
 public class Asignado_aServiceIMPL implements IAsignado_aService {
 	
 	@Autowired

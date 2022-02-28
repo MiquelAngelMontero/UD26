@@ -3,10 +3,11 @@ package main.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import main.dao.IProyectoDAO;
 import main.dto.Proyecto;
-
+@Service
 public class ProyectoServiceIMPL implements IProyectoService {
 	
 	@Autowired
