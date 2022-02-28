@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name="Cientificos")
+@Table(name="cientificos")
 public class Cientificos {
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -26,7 +26,7 @@ public class Cientificos {
 	private String nomApels;
 	
 	@OneToMany
-	@JoinColumn(name="id")
+	@JoinColumn(name="dni")
 	private List<Asignado_a> asignado_a;
 
 	//Constructor
@@ -96,7 +96,7 @@ public class Cientificos {
 	 * @return the asignado_a
 	 */
 	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy="asignado_a")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy="Asignado_a")
 	public List<Asignado_a> getAsignado_a() {
 		return asignado_a;
 	}

@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name="Proyecto")
+@Table(name="proyecto")
 public class Proyecto {
 	
 	@Id
@@ -97,7 +97,7 @@ public class Proyecto {
 	 * @return the asignado_a
 	 */
 	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "asignado_a")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Asignado_a")
 	public List<Asignado_a> getAsignado_a() {
 		return asignado_a;
 	}

@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="Asignado_a")
+@Table(name="asignado_a")
 public class Asignado_a {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -80,6 +80,11 @@ public class Asignado_a {
 	 */
 	public void setProyecto(Proyecto proyecto) {
 		this.proyecto = proyecto;
+	}
+
+	@Override
+	public String toString() {
+		return "Asignado_a [id=" + id + ", cientificos=" + cientificos + ", proyecto=" + proyecto + "]";
 	}
 	
 	
