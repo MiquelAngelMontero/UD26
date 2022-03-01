@@ -26,7 +26,7 @@ public class Cientificos {
 	private String nomApels;
 	
 	@OneToMany
-	@JoinColumn(name="dni")
+	@JoinColumn(name="id")
 	private List<Asignado_a> asignado_a;
 
 	//Constructor
@@ -41,7 +41,7 @@ public class Cientificos {
 	 * @param asignado_a
 	 */
 	public Cientificos(int id, String dni, String nomApels, List<Asignado_a> asignado_a) {
-		super();
+		//super();
 		this.id = id;
 		this.dni = dni;
 		this.nomApels = nomApels;
