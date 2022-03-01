@@ -1,5 +1,7 @@
 USE cientificos2;
-
+DROP TABLE asignado_a;
+DROP TABLE proyecto;
+DROP TABLE cientificos;
 CREATE TABLE IF NOT exists proyecto (
 id int primary key auto_increment,
 nombre nvarchar(255),
