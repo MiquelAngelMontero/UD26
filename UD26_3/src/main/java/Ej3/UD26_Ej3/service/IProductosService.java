@@ -1,7 +1,8 @@
-package UD26_Ej3.service;
+package Ej3.UD26_Ej3.service;
 
 import java.util.List;
-import UD26_Ej3.dto.Productos;
+
+import Ej3.UD26_Ej3.dto.Productos;
 
 public interface IProductosService {
 
@@ -9,9 +10,9 @@ public interface IProductosService {
 
 	public Productos guardarProductos(Productos Productos);
 
-	public Productos ProductosXID(int id);
+	public Productos ProductosXID(int ID);
 
 	public Productos actualizarProductos(Productos Productos);
 
-	public void eliminarProductos(int id);
+	public void eliminarProductos(int ID);
 }

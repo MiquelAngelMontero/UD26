@@ -1,4 +1,4 @@
-package UD26_Ej3.dto;
+package Ej3.UD26_Ej3.dto;
 
 import java.util.List;
 
@@ -10,30 +10,29 @@ public class Maquinas_Registradoras {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int Codigo;
+	private int ID;
 	@Column(name = "Piso")
 	private int piso;
 	
 	@OneToMany
-	@JoinColumn(name = "codigo")
+	@JoinColumn(name = "id")
 	private List<Maquinas_Registradoras> maquinas_Registradoras;
 	
 	public Maquinas_Registradoras() {
 		
 	}
 	
-	public Maquinas_Registradoras(int codigo, int piso, List<Maquinas_Registradoras> maquinas_Registradoras) {
-		super();
-		Codigo = codigo;
+	public Maquinas_Registradoras(int id, int piso, List<Maquinas_Registradoras> maquinas_Registradoras) {
+		ID = id;
 		this.piso = piso;
 		this.maquinas_Registradoras = maquinas_Registradoras;
 	}
 	
-	public int getCodigo() {
-		return Codigo;
+	public int getid() {
+		return ID;
 	}
-	public void setCodigo(int codigo) {
-		Codigo = codigo;
+	public void setid(int id) {
+		ID = id;
 	}
 	public int getPiso() {
 		return piso;
@@ -43,7 +42,7 @@ public class Maquinas_Registradoras {
 	}
 	@Override
 	public String toString() {
-		return "Maquinas_Registradoras [Codigo=" + Codigo + ", piso=" + piso + "]";
+		return "Maquinas_Registradoras [id=" + ID + ", piso=" + piso + "]";
 	}
 	
 }

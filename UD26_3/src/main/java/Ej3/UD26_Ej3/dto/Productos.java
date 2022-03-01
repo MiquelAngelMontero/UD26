@@ -1,4 +1,4 @@
-package UD26_Ej3.dto;
+package Ej3.UD26_Ej3.dto;
 
 import java.util.List;
 
@@ -10,32 +10,32 @@ public class Productos {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int Codigo;
+	private int ID;
 	@Column(name = "Nombre")
 	private String nombre;
 	@Column(name = "Precio")
 	private int precio;
 	
 	@OneToMany
-	@JoinColumn(name = "codigo")
+	@JoinColumn(name = "ID")
 	private List<Productos> productos;
 	
 	public Productos() {
 		
 	}
 	
-	public Productos(int codigo, String nombre, int precio, List<Productos> productos) {
-		Codigo = codigo;
+	public Productos(int id, String nombre, int precio, List<Productos> productos) {
+		ID = id;
 		this.nombre = nombre;
 		this.precio = precio;
 		this.productos = productos;
 	}
 	
-	public int getCodigo() {
-		return Codigo;
+	public int getID() {
+		return ID;
 	}
-	public void setCodigo(int codigo) {
-		Codigo = codigo;
+	public void setID(int id) {
+		ID = id;
 	}
 	public String getNombre() {
 		return nombre;
@@ -52,7 +52,7 @@ public class Productos {
 	
 	@Override
 	public String toString() {
-		return "Productos [Codigo=" + Codigo + ", nombre=" + nombre + ", precio=" + precio + "]";
+		return "Productos [id=" + ID + ", nombre=" + nombre + ", precio=" + precio + "]";
 	}
 	
 }

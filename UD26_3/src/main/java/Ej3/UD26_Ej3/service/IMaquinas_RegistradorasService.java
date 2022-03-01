@@ -1,7 +1,8 @@
-package UD26_Ej3.service;
+package Ej3.UD26_Ej3.service;
 
 import java.util.List;
-import UD26_Ej3.dto.Maquinas_Registradoras;
+
+import Ej3.UD26_Ej3.dto.Maquinas_Registradoras;
 
 public interface IMaquinas_RegistradorasService {
 
@@ -9,9 +10,9 @@ public interface IMaquinas_RegistradorasService {
 
 	public Maquinas_Registradoras guardarMaquinas_Registradoras(Maquinas_Registradoras Maquinas_Registradoras);
 
-	public Maquinas_Registradoras Maquinas_RegistradorasXID(int id);
+	public Maquinas_Registradoras Maquinas_RegistradorasXID(int ID);
 
 	public Maquinas_Registradoras actualizarMaquinas_Registradoras(Maquinas_Registradoras Maquinas_Registradoras);
 
-	public void eliminarMaquinas_Registradoras(int id);
+	public void eliminarMaquinas_Registradoras(int ID);
 }

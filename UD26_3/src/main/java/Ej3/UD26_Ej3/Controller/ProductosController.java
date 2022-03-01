@@ -1,11 +1,12 @@
-package UD26_Ej3.Controller;
+package Ej3.UD26_Ej3.Controller;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import UD26_Ej3.dto.Productos;
-import UD26_Ej3.service.ProductosServiceIMPL;
+
+import Ej3.UD26_Ej3.dto.Productos;
+import Ej3.UD26_Ej3.service.ProductosServiceIMPL;
 
 @RestController
 @RequestMapping("/api")
@@ -45,7 +46,7 @@ public class ProductosController {
 
 		Productos_seleccionado = productosServiceImpl.ProductosXID(Codigo);
 
-		Productos_seleccionado.setCodigo(Productos.getCodigo());
+		Productos_seleccionado.setID(Productos.getID());
 		Productos_seleccionado.setNombre(Productos.getNombre());
 		Productos_seleccionado.setPrecio(Productos.getPrecio());
 

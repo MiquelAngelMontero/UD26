@@ -1,4 +1,4 @@
-package UD26_Ej3;
+package Ej3.UD26_Ej3;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

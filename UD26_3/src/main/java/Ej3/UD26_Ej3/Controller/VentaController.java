@@ -1,10 +1,11 @@
-package UD26_Ej3.Controller;
+package Ej3.UD26_Ej3.Controller;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import UD26_Ej3.dto.Venta;
-import UD26_Ej3.service.VentaServiceIMPL;
+
+import Ej3.UD26_Ej3.dto.Venta;
+import Ej3.UD26_Ej3.service.VentaServiceIMPL;
 
 
 @RestController
@@ -16,7 +17,7 @@ public class VentaController {
 
 	@GetMapping("/Venta")
 	public List<Venta> listarVentas() {
-		return ventaServiceImpl.listarVenta();
+		return ventaServiceImpl.listarVentas();
 	}
 
 	@PostMapping("/Ventas")

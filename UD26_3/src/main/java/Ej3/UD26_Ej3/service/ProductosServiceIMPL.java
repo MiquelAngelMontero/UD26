@@ -1,11 +1,13 @@
-package UD26_Ej3.service;
+package Ej3.UD26_Ej3.service;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import UD26_Ej3.dao.IProductosDAO;
-import UD26_Ej3.dto.Productos;
+import Ej3.UD26_Ej3.dao.IProductosDAO;
+import Ej3.UD26_Ej3.dto.Productos;
 
+@Service
 public class ProductosServiceIMPL implements IProductosService{
 
 	@Autowired

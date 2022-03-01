@@ -1,11 +1,11 @@
-package UD26_Ej3.service;
+package Ej3.UD26_Ej3.service;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import UD26_Ej3.dao.ICajerosDAO;
-import UD26_Ej3.dto.Cajeros;
+import Ej3.UD26_Ej3.dao.ICajerosDAO;
+import Ej3.UD26_Ej3.dto.Cajeros;
 
 @Service
 public class CajerosServiceIMPL implements ICajerosService{

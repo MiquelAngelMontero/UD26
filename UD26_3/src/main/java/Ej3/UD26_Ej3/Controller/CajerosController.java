@@ -1,10 +1,11 @@
-package UD26_Ej3.Controller;
+package Ej3.UD26_Ej3.Controller;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import UD26_Ej3.dto.Cajeros;
-import UD26_Ej3.service.CajerosServiceIMPL;
+
+import Ej3.UD26_Ej3.dto.Cajeros;
+import Ej3.UD26_Ej3.service.CajerosServiceIMPL;
 
 @RestController
 @RequestMapping("/api")
@@ -44,7 +45,7 @@ public class CajerosController {
 
 			Cajeros_seleccionado = cajerosServiceImpl.CajerosXID(Codigo);
 
-			Cajeros_seleccionado.setCodigo(Cajeros.getCodigo());
+			Cajeros_seleccionado.setid(Cajeros.getid());
 			Cajeros_seleccionado.setNomApels(Cajeros.getNomApels());
 
 			Cajeros_actualizado = cajerosServiceImpl.actualizarCajeros(Cajeros_seleccionado);

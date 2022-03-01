@@ -1,18 +1,19 @@
-package UD26_Ej3.service;
+package Ej3.UD26_Ej3.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import UD26_Ej3.dao.IVentaDAO;
-import UD26_Ej3.dto.Venta;
+
+import Ej3.UD26_Ej3.dao.IVentaDAO;
+import Ej3.UD26_Ej3.dto.Venta;
 
 @Service
-public class VentaServiceIMPL {
+public class VentaServiceIMPL implements IVentaService{
 
 	@Autowired
 	IVentaDAO iVentasDAO;
-	public List<Venta> listarVenta() {
+	public List<Venta> listarVentas() {
 		return iVentasDAO.findAll();
 	}
 

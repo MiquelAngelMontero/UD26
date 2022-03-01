@@ -1,4 +1,4 @@
-package UD26_Ej3.dto;
+package Ej3.UD26_Ej3.dto;
 
 import java.util.List;
 import javax.persistence.*;
@@ -10,29 +10,29 @@ public class Cajeros {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int Codigo;
+	private int ID;
 	@Column(name = "NomApels")
 	private String nomApels;
 	
 	@OneToMany
-	@JoinColumn(name = "codigo")
+	@JoinColumn(name = "id")
 	private List<Cajeros> cajeors;
 	
 	public Cajeros() {
 		
 	}
 	
-	public Cajeros(int codigo, String nomApels, List<Cajeros> cajeors) {
-		Codigo = codigo;
+	public Cajeros(int id, String nomApels, List<Cajeros> cajeors) {
+		ID = id;
 		this.nomApels = nomApels;
 		this.cajeors = cajeors;
 	}
 	
-	public int getCodigo() {
-		return Codigo;
+	public int getid() {
+		return ID;
 	}
-	public void setCodigo(int codigo) {
-		Codigo = codigo;
+	public void setid(int id) {
+		ID = id;
 	}
 	public String getNomApels() {
 		return nomApels;
@@ -42,7 +42,7 @@ public class Cajeros {
 	}
 	@Override
 	public String toString() {
-		return "Cajeros [Codigo=" + Codigo + ", nomApels=" + nomApels + "]";
+		return "Cajeros [id=" + ID + ", nomApels=" + nomApels + "]";
 	}
 	
 }

@@ -1,11 +1,15 @@
-package UD26_Ej3.dto;
+package Ej3.UD26_Ej3.dto;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="Venta")
+@Table(name="venta")
 public class Venta {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int ID;
+	
 	@ManyToOne
 	@JoinColumn(name = "cajero")
 	Cajeros cajeros;
@@ -22,10 +26,21 @@ public class Venta {
 		
 	}
 	
-	public Venta(Cajeros cajeros, Maquinas_Registradoras maquinas_Registradoras, Productos productos) {
+	
+	public Venta(int iD, Cajeros cajeros, Maquinas_Registradoras maquinas_Registradoras, Productos productos) {
+		super();
+		ID = iD;
 		this.cajeros = cajeros;
 		this.maquinas_Registradoras = maquinas_Registradoras;
 		this.productos = productos;
+	}
+
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
 	}
 
 	public Cajeros getCajeros() {

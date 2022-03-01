@@ -1,10 +1,11 @@
-package UD26_Ej3.Controller;
+package Ej3.UD26_Ej3.Controller;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import UD26_Ej3.dto.Maquinas_Registradoras;
-import UD26_Ej3.service.Maquinas_RegistradorasServiceIMPL;
+
+import Ej3.UD26_Ej3.dto.Maquinas_Registradoras;
+import Ej3.UD26_Ej3.service.Maquinas_RegistradorasServiceIMPL;
 
 @RestController
 @RequestMapping("/api")
@@ -44,7 +45,7 @@ public class Maquinas_RegistradorasController {
 
 		Maquinas_Registradoras_seleccionado = maquinas_RegistradorasServiceImpl.Maquinas_RegistradorasXID(Codigo);
 
-		Maquinas_Registradoras_seleccionado.setCodigo(Maquinas_Registradoras.getCodigo());
+		Maquinas_Registradoras_seleccionado.setid(Maquinas_Registradoras.getid());
 		Maquinas_Registradoras_seleccionado.setPiso(Maquinas_Registradoras.getPiso());
 
 		Maquinas_Registradoras_actualizado = maquinas_RegistradorasServiceImpl.actualizarMaquinas_Registradoras(Maquinas_Registradoras_seleccionado);

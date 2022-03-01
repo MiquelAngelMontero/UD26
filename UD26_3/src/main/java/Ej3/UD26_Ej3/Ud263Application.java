@@ -1,4 +1,4 @@
-package UD26_Ej3;
+package Ej3.UD26_Ej3;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

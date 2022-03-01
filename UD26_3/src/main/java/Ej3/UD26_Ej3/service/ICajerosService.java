@@ -1,7 +1,8 @@
-package UD26_Ej3.service;
+package Ej3.UD26_Ej3.service;
 
 import java.util.List;
-import UD26_Ej3.dto.Cajeros;
+
+import Ej3.UD26_Ej3.dto.Cajeros;
 
 public interface ICajerosService {
 
@@ -9,9 +10,9 @@ public interface ICajerosService {
 
 	public Cajeros guardarCajeros(Cajeros Cajeros);
 
-	public Cajeros CajerosXID(int Codigo);
+	public Cajeros CajerosXID(int ID);
 
 	public Cajeros actualizarCajeros(Cajeros Cajeros);
 
-	public void eliminarCajeros(int Codigo);
+	public void eliminarCajeros(int ID);
 }
